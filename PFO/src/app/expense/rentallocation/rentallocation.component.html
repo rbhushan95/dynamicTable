@@ -1,0 +1,20 @@
+<p>
+  rentallocation works!
+</p>
+<table>
+  <tr *ngFor="let car of data">{{car}}</tr>
+</table>
+<div>
+  Dynamic Table crreation:-
+  <br>
+  <table>
+    <tr>
+      <th *ngFor="let column of coumns">{{column}}</th>
+    </tr>
+    <tbody>
+      <tr *ngFor="let rowdata of rows">
+        <td *ngFor="let columndata of rowdata.data" (click)='getRowData(rowdata.data)'>{{columndata}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
